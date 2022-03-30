@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+import useHandleSearch from "./hooks/useHandleSearch";
+import List from "./components/list/List";
+import Search from "./components/search/Search";
+import "./app.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [results, setResults] = useState([]);
+
+	const handleSearch = (e) => {
+		const query = e.target.value;
+		if (query.length < 2) return;
+
+		axios.get("https://api.frontendeval.com/fake/food/" + query).then((res) => {
+			setResults(res.data);
+			console.log(results);
+		});
+	};
+
+	let searchResults = useHandleSearch(e.target.value);
+
+	const addItem = (item) => {
+		console.log(item);
+	};
+
+	return (
+		<div className="App">
+			<Search handleSearch={useHandleSearch} />
+			<List results={results} addItem={addItem} />
+		</div>
+	);
 }
 
 export default App;
