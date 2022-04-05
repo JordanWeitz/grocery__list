@@ -1,0 +1,23 @@
+.counter {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 10px;
+	height: 80px;
+	align-items: center;
+}
+
+.counter__value {
+	border-radius: 100%;
+	background-color: #dda15e;
+	color: #283618;
+	font-weight: 900;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.counter__value__none {
+	display: none;
+}

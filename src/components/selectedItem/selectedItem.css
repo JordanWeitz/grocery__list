@@ -1,0 +1,19 @@
+.selected__item {
+	display: flex;
+	height: 40px;
+	width: 100%;
+	align-items: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.selected__item:hover {
+	background-color: #dda15e;
+}
+
+.selected__item__X {
+	margin-right: 10px;
+	display: flex;
+	justify-content: center;
+	margin-left: 10px;
+	cursor: pointer;
+}

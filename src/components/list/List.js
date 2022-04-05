@@ -6,10 +6,9 @@ function List({ results, addItem }) {
 	return (
 		<div className="list">
 			{results?.slice(0, 5)?.map((result, i) => {
-				console.log(i);
 				return (
-					<div key={i} onClick={() => addItem(result)}>
-						{result}
+					<div className="list__item" key={i} onClick={() => addItem(result)}>
+						{result.toUpperCase()}
 					</div>
 				);
 			})}
