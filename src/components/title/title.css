@@ -1,7 +1,14 @@
 .title {
-	font-size: 1.5em;
 	font-weight: bold;
 	text-align: center;
 	margin: 2em;
-	margin-top: 100px;
+	color: #dda15e;
+}
+
+.title__header {
+	font-size: 4em;
+}
+
+.title__p {
+	font-size: 1.5em;
 }

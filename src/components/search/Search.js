@@ -8,6 +8,7 @@ function Search({ handleSearch, searchEmpty }) {
 				type="text"
 				onKeyUp={(e) => handleSearch(e)}
 				className={`search__input ${searchEmpty ? "search__input__empty" : ""}`}
+				placeholder="Search here..."
 			/>
 		</div>
 	);

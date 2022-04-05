@@ -1,12 +1,12 @@
 import React from "react";
 import "./counter.css";
 
-function Counter({ searchEmpty, value }) {
+function Counter({ value }) {
 	return (
 		<div className="counter">
 			<div
 				className={`counter__value ${
-					searchEmpty ? "counter__value__none" : ""
+					value === 0 ? "counter__value__none" : ""
 				}`}
 			>
 				{value}

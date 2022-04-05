@@ -48,12 +48,14 @@ function App() {
 	return (
 		<div className="App">
 			<Title />
-			<div className="grocery__wrapper">
-				<div className="container">
-					<Search handleSearch={handleSearch} searchEmpty={searchEmpty} />
-					{searchEmpty ? <></> : <List results={results} addItem={addItem} />}
-					<Selected selected={selected} removeItem={removeItem} />
-					<Counter searchEmpty={searchEmpty} value={selected.length} />
+			<div className="lower__wrapper">
+				<div className="grocery__wrapper">
+					<div className="container">
+						<Search handleSearch={handleSearch} searchEmpty={searchEmpty} />
+						{searchEmpty ? <></> : <List results={results} addItem={addItem} />}
+						<Selected selected={selected} removeItem={removeItem} />
+						<Counter value={selected.length} />
+					</div>
 				</div>
 			</div>
 		</div>
