@@ -35,7 +35,7 @@ html {
 }
 
 .grocery__wrapper {
-	min-height: 600px;
+	max-height: 500px;
 	width: 600px;
 	background-color: #283618;
 	border-radius: 10px;

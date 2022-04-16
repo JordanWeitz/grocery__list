@@ -7,7 +7,6 @@
 	transition: all 0.3s ease-in-out;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
-
 }
 
 .selected__item:hover {
@@ -32,14 +31,14 @@
 	align-items: center;
 
 	width: 100%;
-
 }
 
 .selected__item__button {
-	height: 41px;
-	width: 41px;
+	height: 40px;
+	width: 40px;
 	background-color: #dda15e;
-	border: 1px solid #283618;
+	border: none;
+
 	cursor: pointer;
 	/* margin-left: 30px; */
 }
@@ -49,15 +48,19 @@
 }
 
 .selected__item__count {
-	height: 41px;
-	width: 41px;
+	border: none;
+	height: 40px;
+	width: 40px;
 	padding: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: #dda15e;
-	border: 1px solid #283618;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
+	/* border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px; */
 }
 
+.selected__item__count:hover {
+	background-color: lightgrey;
+	color: white;
+}
